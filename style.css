@@ -1,0 +1,225 @@
+/*****************************
+*** GENERAL
+******************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(235, 77, 77, 0.2)), url(wood.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  font-family: Lato;
+  font-weight: 300;
+  position: relative;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.wrapper {
+  width: 1000px;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /*overflow: hidden;*/
+  /*why not "margin: 0 auto"?: http://stackoverflow.com/questions/9998260/css-absolute-position-wont-work-with-margin-leftauto-margin-right-auto*/
+}
+
+/*****************************
+*** PLAYAS
+******************************/
+
+.player-1-panel,
+.player-2-panel {
+  width: 50%;
+  float: left;
+  height: 600px;
+}
+
+.player-1-panel {
+  padding: 100px 175px 100px 25px;
+}
+
+.player-2-panel {
+  padding: 100px 25px 100px 175px;
+}
+
+.player-name {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 100;
+  font-size: 30px;
+  margin-top: 90px;
+  margin-bottom: 25px;
+}
+
+.player-rounds-label {
+  color: #EB4D4D;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: center;
+}
+
+.player-score {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 60px;
+  font-weight: 100;
+  color: #EB4D4D;
+  margin-bottom: 50px;
+}
+
+.player-current-box {
+  background-color: #EB4D4D;
+  color: #fff;
+  width: 40%;
+  margin: 0 auto;
+  padding: 12px;
+  text-align: center;
+}
+
+.player-current-label {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.player-current-score {
+  font-size: 30px;
+}
+
+.active { background-color: #f7f7f7; }
+.active .player-name { font-weight: 300; }
+
+.active .player-name::before {
+  position: absolute;
+  content: "\2022";
+  color: #EB4D4D;
+  left: 50px;
+  top: -1px;
+}
+
+/*****************************
+*** DICE
+******************************/
+.dice-pad {
+  position: absolute;
+  background-color: #27ae60;
+  width: 35%;
+  height: 125px;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dice {
+  position: absolute;
+  top: 20%;
+  height: 75px;
+  transform: translateX(-50%);
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.dice-placeholder {
+  position: absolute;
+  top: 20%;
+  width: 75px;
+  height: 75px;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: none;
+}
+
+.die-pos1 {
+  left: 20%;
+  /*vertical-align: middle;*/
+}
+
+.die-pos2 {
+  left: 50%;
+}
+
+.die-pos3 {
+  left: 80%;
+}
+
+.hide { display: none; }
+/*.show { display: block; }*/
+.lock-die {
+  border: 5px solid #EB4D4D;
+  box-sizing: content-box;
+  top: 16%; /*probably a better way to do this*/
+}
+
+/*****************************
+*** BUTTONS
+******************************/
+button {
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #555;
+  font-family: Lato;
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 300;
+  border: none;
+  background: none;
+}
+
+button:hover { font-weight: 600;}
+button:hover i { margin-right: 20px;}
+
+button:focus { outline: none; }
+
+i {
+  color: #EB4D4D;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 32px;
+  vertical-align: middle;
+  margin-top: -6px;
+  transition: margin 0.3s;
+}
+
+.btn-new { top: 360px; }
+.btn-roll { top: 410px; }
+
+/*****************************
+*** ROUNDS
+******************************/
+.current-round {
+  position: absolute;
+  left: 50%;
+  top: 275px;
+  transform: translateX(-50%);
+  color: #555;
+  font-family: Lato;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+#tie-label {
+  color: #EB4D4D;
+  font-weight: 300;
+}
+
+/*#round-score {
+  color: #EB4D4D;
+}*/

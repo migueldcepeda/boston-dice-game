@@ -33,7 +33,8 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   /*overflow: hidden;*/
-  /*why not "margin: 0 auto"?: http://stackoverflow.com/questions/9998260/css-absolute-position-wont-work-with-margin-leftauto-margin-right-auto*/
+  /*why not "margin: 0 auto"?: http://stackoverflow.com/questions/9998260/css-absolute-position-wont-work-with-margin-leftauto-margin-right-auto
+  answer: because of absolute positioning*/
 }
 
 /*****************************

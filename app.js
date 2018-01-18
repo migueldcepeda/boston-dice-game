@@ -51,7 +51,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
         die2DOM.classList.add('hide');
         die3DOM.classList.add('hide');
         activated = true;
-      }, 1000);
+      }, 2000);
       roll1 = false;
       roll2 = true;
     }
@@ -87,7 +87,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
         dice_phDOM[2].classList.remove('hide');
         die3DOM.classList.add('hide');
         activated = true;
-      }, 1000);
+      }, 2000);
       roll2 = false;
       roll3 = true;
     }
@@ -115,7 +115,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 
       setTimeout(function(){
           nextPlayer();
-      }, 1000);
+      }, 2000);
     }
   }
 });
